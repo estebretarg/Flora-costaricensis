@@ -1,0 +1,41 @@
+pallette {
+  color: #38897A;
+  color: #184B46;
+  color: #D3D05D;
+  color: #E6E9B2;
+  color: #7F443C;
+}
+html {
+  font-family: 'Times New Roman', Times, serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: fit-content;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  width: 100%;
+  /*background-color: white;*/
+}
+.nav {
+  /*background-color: #38897A;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main {
+  margin-top: 7%;
+}
+h1{
+  font-size: xx-large;
+}
+#space {
+  background-color: #184B46;
+  margin-left: 50%;
+}
