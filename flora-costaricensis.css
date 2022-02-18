@@ -5,54 +5,90 @@ pallette {
   color: #E6E9B2;
   color: #7F443C;
 }
-html {
-  font-family: 'Times New Roman', Times, serif;
-}
+
 body {
-  display: flex;
-  flex-direction: column;
+  font-family: 'Times New Roman', Times, serif;
+  width: 98vw;
 }
+
 header {
-  height: 5vh;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: black;
-  width: 100vw;
+  position: auto;
   /*background-color: white;*/
 }
-header .logo {
-  max-width: 100px;
-  min-width: 50px;
-  max-height: 100px;
-  min-height: 100px;
-}
+
 nav {
+  overflow: hidden;
+  padding: 1em;
+  /*align-items: right;
+  background-color: #184B46;*/
+}
+nav h1 {
+  float: left;
+  margin-top: 1em;
+  font-size: 200%;
+  font-style: italic;
+}
+nav ul {
+  float: right;
+  margin-top: 1em;
   display: inline-flex;
   flex-direction: row;
-  align-items: flex-end;
-  background-color: #184B46;
-  width: 75%;
+  align-items: center;
 }
 nav ul li {
   display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #38897A;
   list-style: none;
 }
+
 nav ul li a{
   text-decoration: none;
   color: black;
+  margin: 1em;
+  font-size: 150%;
 }
+hr {
+  margin-top: -2em;
+}
+/*Change only from here*/
 main {
-  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin-top: 5%;
 }
-h1{
+
+main div{
+  display: flex;
+  width: auto;
+  height: 100vh;
+  /*border: 1px solid black;*/
+}
+
+div.Presentation p {
+  display: flexbox;
+  align-items: center;
+  font-size: 300%;
+  font-weight: bolder;
+  /*border: 1px solid black;*/
+  padding: 2em;
+}
+
+div.information-block#Features {
+  margin-top: 15em;
+  display: flex;
+  flex-direction: column;
+}
+
+div.information-block#Features h2 {
   font-size: 200%;
+  /*border: 1px solid black;*/
 }
-/*#space {
-  background-color: #184B46;
-  width: 25%;
-}*/
+div.information-block#Features ul {
+  /*border: 1px solid black;*/
+  padding: 2em;
+}
+
+div.information-block#Features ul li {
+  font-size: 150%;
+  margin: 1em 1em 1em 5em;
+}
