@@ -12,30 +12,47 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 header {
-  height: fit-content;
+  height: 5vh;
   position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
   color: black;
-  width: 100%;
+  width: 100vw;
   /*background-color: white;*/
 }
-.nav {
-  /*background-color: #38897A;*/
-  display: flex;
+header .logo {
+  max-width: 100px;
+  min-width: 50px;
+  max-height: 100px;
+  min-height: 100px;
+}
+nav {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-end;
+  background-color: #184B46;
+  width: 75%;
+}
+nav ul li {
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
+  background-color: #38897A;
+  list-style: none;
+}
+nav ul li a{
+  text-decoration: none;
+  color: black;
 }
 main {
   margin-top: 7%;
 }
 h1{
-  font-size: xx-large;
+  font-size: 200%;
 }
-#space {
+/*#space {
   background-color: #184B46;
-  margin-left: 50%;
-}
+  width: 25%;
+}*/
