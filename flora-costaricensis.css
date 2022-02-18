@@ -53,24 +53,38 @@ hr {
 main {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 2em 5em 0em 5em;
   margin-top: 5%;
 }
 
 main div{
   display: flex;
   width: auto;
-  height: 100vh;
+  height: 95vh;
   /*border: 1px solid black;*/
 }
 
-div.Presentation p {
-  display: flexbox;
+div.Presentation {
+  display: inline-flexbox;
+  flex-direction: column;
   align-items: center;
-  font-size: 300%;
+  height: 90vh;
+}
+
+div.Presentation p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
   font-weight: bolder;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
   padding: 2em;
+  width: fit-content;
+}
+
+div.Presentation p i q {
+  float: right;
+  font-size: 75%;
 }
 
 div.information-block#Features {
