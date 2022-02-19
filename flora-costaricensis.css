@@ -43,17 +43,17 @@ nav ul li {
 nav ul li a{
   text-decoration: none;
   color: black;
-  margin: 1em;
-  font-size: 150%;
+  margin: 1.25em 1em;
+  font-size: 125%;
 }
 hr {
-  margin-top: -2em;
+  margin-top: -3em;
 }
 /*Change only from here*/
 main {
   display: flex;
   flex-direction: column;
-  padding: 2em 5em 0em 5em;
+  padding: 2em 2.5em 0em 2.5em;
   margin-top: 5%;
 }
 
@@ -68,7 +68,7 @@ div.Presentation {
   display: inline-flexbox;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 div.Presentation p {
@@ -77,7 +77,7 @@ div.Presentation p {
   align-items: center;
   font-size: 2em;
   font-weight: bolder;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 2em;
   width: fit-content;
 }
@@ -93,7 +93,7 @@ div.information-block#Features {
   flex-direction: column;
 }
 
-div.information-block#Features h2 {
+div.information-block h2 {
   font-size: 200%;
   /*border: 1px solid black;*/
 }
@@ -105,4 +105,26 @@ div.information-block#Features ul {
 div.information-block#Features ul li {
   font-size: 150%;
   margin: 1em 1em 1em 5em;
+}
+
+#myBtn {
+  display: block; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: white; /* Add a dark-grey background on hover */
+  color: black;
+  border: 1px solid #184B46;
 }
