@@ -29,6 +29,10 @@ It is an easy to use tool with interactive and settable dichotomous keys based o
   <li>The financial support: open source does not mean die of starvation. <br><br>We need to find interested institutions who can support the project and get recognition of the public as green-nature interested companies.</>
 </ul>
 
+# Methodology:
+
+Species are stored as objects in JSON format, for easy recognition and easy edition due to the constant investigation in taxonomy, highly active in Costa Rica.
+
 # Legal Disclaimers:
 
 All legal related matters are pending, if you are interested in collaborate in legal matters please contact me on the channels provided on my Github profile.
