@@ -1,0 +1,10 @@
+{
+  "plantas":[
+    {
+      "Phylum": "Gimnospermas",
+      "Familia": "Pinaceae",
+      "Genero": "Pinus",
+      "Nombre": "Pinus caribea"
+    }
+  ]
+}
