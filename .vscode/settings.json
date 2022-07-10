@@ -4,5 +4,7 @@
     "Hammel",
     "Plantas",
     "Troyo"
-  ]
+  ],
+  "python.languageServer": "Pylance"
 }
+
