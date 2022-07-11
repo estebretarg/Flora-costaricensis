@@ -9,7 +9,7 @@
   "python.languageServer": "Pylance",
 
   "editor.semanticTokenColorCustomizations": {
-    "[One Dark Pro]": { // Apply to this theme only
+    "[Solarized dark]": { // Apply to this theme only
         "enabled": true,
         "rules": {
             "magicFunction:python": "#ee0000",
