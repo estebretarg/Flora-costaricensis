@@ -1,8 +1,8 @@
 # Flora-costaricensis
 
-Flora costaricensis is a professional botanical identification tool for plant species present in Costa Rica.
+Flora costaricensis is a professional botanical identification tool for mayor vascular plant species present in Costa Rica.
 
-It was designed for botanists, dendrologists, forestall engineers, agronomists or other plant related fields.
+It was designed for botanists, dendrologists, forestal engineers, agronomists or other plant related fields.
 
 This tool intend to help researchers and other environmental sciences professionals to complete or advance projects faster. Accelerating the conservation efforts and at the same time contributing to the environmental agenda. Also it will be a great learn tool for students.
 
@@ -31,16 +31,30 @@ It is an easy to use tool with interactive and settable dichotomous keys based o
 
 # Methodology:
 
-Species are stored in a main database distributed in different tables deppending on the species Phylum.
+Species are stored in an SQLite database distributed in different tables deppending on the species Division.
 
-<tr>
-  <th>Phylum</th>
-</tr>
-<tr>
-  <td>Gimonspermas</td>
-  <td>Angiospermas</td>
-</tr>
-  
+Division:
+
+<ul>
+  <li>Gimonspermas</>
+  <li>Angiospermas</>
+</ul>
+
+Each table include the next columns:
+
+<table>
+  <tr>
+    <th>Family</th>
+    <th>Genera</th>
+    <th>Species</th>
+    <th>Description</th>
+    <th>Life_zone</th>
+    <th>Elevation</th>
+    <th>Slope</th>
+  </tr>
+</table>
+
+****The elevation is stored as a range of values between the first value and the second value available in the book.***
 
 # Legal Disclaimers:
 
