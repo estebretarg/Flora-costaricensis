@@ -1,5 +1,5 @@
-#ignore ALL files in ANY directory named _pycache_
-_pycache_/
+#ignore ALL /APP/_pycache/.pyc files
+*.pyc
 
 #ignore ALL /APP/.csv files
 *.csv

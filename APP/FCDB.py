@@ -1,14 +1,15 @@
 import sqlite3
-from unittest.util import _count_diff_all_purpose
 
 
-#Connect the DB
+# Connect the DB
 conn = sqlite3.connect('FloraCostaricensisDB.db')
-print ("Connected to FloraCostaricensis data base")
-#SQLite cursor
+print("Connected to FloraCostaricensis data base")
+# SQLite cursor
 cursor = conn.cursor()
 
-#create a table
+# create a table
+
+
 def table_creator():
     cursor.execute("""CREATE TABLE Gimnospermas
                     (
@@ -22,14 +23,16 @@ def table_creator():
                     )
                     """)
 
-#Convert sp description file to Binary in order to add it as BLOB DATATYPE into "description" column in table.
+# Convert sp description file to Binary in order to add it as BLOB DATATYPE into "description" column in table.
+
+
 def file_to_binary(filename):
     with open(filename, 'rb') as file:
         blobData = file.read()
     return blobData
 
+
 def insertBLOB(Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Vertiente):
-    try:
         insert_blob_query = """
                             INSERT INTO Gimnospermas (Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Vertiente)
                             VALUES (?,?,?,?,?,?,?)
@@ -38,7 +41,8 @@ def insertBLOB(Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Ver
         print("Please enter the .txt file you want to convert")
         txt_file = str(input())
         file_binary = file_to_binary(txt_file)
-        data_tuple = (Familia, Genero, Especie, file_binary, Zona_de_vida, Altitud, Vertiente)
+        data_tuple = (Familia, Genero, Especie, file_binary,
+                      Zona_de_vida, Altitud, Vertiente)
         # Commit our command
         conn.commit()
         print("Information committed")
@@ -50,7 +54,7 @@ def insertBLOB(Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Ver
         print("Connection closed")
 
 
-#Insert many inputs
+# Insert many inputs
 Gimnospermas =  [
                     ('Cupressaceae', 
                     'Cupressus', 
@@ -59,7 +63,7 @@ Gimnospermas =  [
                     '1000 - 1300', 'Pacifico')
                 ]
 
-#Insert many inputs
-#cursor.executemany("INSERT INTO Gimnospermas VALUES (?,?,?,?,?,?,?)", Gimnospermas)
+# Insert many inputs
+# cursor.executemany("INSERT INTO Gimnospermas VALUES (?,?,?,?,?,?,?)", Gimnospermas)
 
 

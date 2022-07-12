@@ -59,4 +59,3 @@ def elevation_range():
     print("Los valores deben ser numéricos")
     
 elevation_range()
-
