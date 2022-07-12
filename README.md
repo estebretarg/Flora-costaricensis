@@ -26,12 +26,21 @@ It is an easy to use tool with interactive and settable dichotomous keys based o
 # Challenges:
 <ul>
   <li>The species names are changing constantly due to advanced ADN research.</>
-  <li>The financial support: open source does not mean die of starvation. <br><br>We need to find interested institutions who can support the project and get recognition of the public as green-nature interested companies.</>
+  <li>Financial support: We need to find interested institutions who can support the project and get recognition of the public as green-nature interested companies.</>
 </ul>
 
 # Methodology:
 
-Species are stored as objects in JSON format, for easy recognition and easy edition due to the constant investigation in taxonomy, highly active in Costa Rica.
+Species are stored in a main database distributed in different tables deppending on the species Phylum.
+
+<tr>
+  <th>Phylum</th>
+</tr>
+<tr>
+  <td>Gimonspermas</td>
+  <td>Angiospermas</td>
+</tr>
+  
 
 # Legal Disclaimers:
 
