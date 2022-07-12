@@ -39,6 +39,10 @@ def elevation_range():
           csv_writer = csv.writer(sys.stdout, delimiter =',')
           #print ;'\n'.join('\t'.join(i) for i in elevation)
           csv_writer.writerow(elevation)
+          
+          with open('elevation_data.csv', 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(elevation)
 
           print("Los valores se guardaron correctamente")
         
@@ -52,7 +56,9 @@ def elevation_range():
       else:
         print("Debe seleccionar Si o No")
         verify_data_input()
-
+  
+    verify_data_input()
+  
   except:
     print("Los valores deben ser numéricos")
     
