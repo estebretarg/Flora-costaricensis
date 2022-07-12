@@ -1,5 +1,4 @@
-#Insert the elevation range of the specie as a python range value'0
-import sys
+#Insert the elevation range of the species as a range of values for further range sorting inside the main app
 import csv
 
 def elevation_range():
@@ -35,18 +34,15 @@ def elevation_range():
           elevation[i] = str(elevation[i])
         
         try:
-          #write the records in a cvs file for further use.
-          csv_writer = csv.writer(sys.stdout, delimiter =',')
-          #print ;'\n'.join('\t'.join(i) for i in elevation)
-          csv_writer.writerow(elevation)
-          
+
           with open('elevation_data.csv', 'w') as f:
             writer = csv.writer(f)
             writer.writerow(elevation)
 
-          print("Los valores se guardaron correctamente")
+          print("El rango de elevación se guardaron correctamente")
         
-        except:  
+        except: 
+           
           print("Ha ocurrido un error")
 
       elif respuesta == "No" or "no":
