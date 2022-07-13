@@ -8,17 +8,15 @@ print("Connected to FloraCostaricensis data base")
 cursor = conn.cursor()
 
 # create a table
-
-
 def table_creator():
     cursor.execute("""CREATE TABLE Gimnospermas
                     (
                         Familia TEXT,
                         Genero TEXT,
                         Especie TEXT,
-                        Descripcion BLOB,
+                        Descripción BLOB,
                         Zona_de_vida TEXT,
-                        Altitud TEXT,
+                        Elevación TEXT,
                         Vertiente TEXT
                     )
                     """)
@@ -33,6 +31,7 @@ def file_to_binary(filename):
 
 
 def insertBLOB(Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Vertiente):
+    try:
         insert_blob_query = """
                             INSERT INTO Gimnospermas (Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Vertiente)
                             VALUES (?,?,?,?,?,?,?)
@@ -46,8 +45,8 @@ def insertBLOB(Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Ver
         # Commit our command
         conn.commit()
         print("Information committed")
-    except
-
+    except:
+        print("error")
     finally:
         # Close our connection
         conn.close()
