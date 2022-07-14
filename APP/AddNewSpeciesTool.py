@@ -20,10 +20,10 @@ def insertNewSpecieData():
         print("Digite el nombre de la familia")
         familia = input()
 
-        print("Digite el genero")
+        print("Digite el género")
         genero = input()
 
-        print("Digite el epíteto especifico")
+        print("Digite el epíteto específico")
         epiteto = input()
         
         especie = genero + " " + epiteto
