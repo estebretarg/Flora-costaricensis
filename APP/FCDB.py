@@ -1,6 +1,5 @@
 import sqlite3
 
-
 # Connect the DB
 conn = sqlite3.connect('FloraCostaricensisDB.db')
 print("Connected to FloraCostaricensis data base")
@@ -9,60 +8,37 @@ cursor = conn.cursor()
 
 # create a table
 def table_creator():
-    cursor.execute("""CREATE TABLE Gimnospermas
+    print ("What is the table name?")
+    tableName = input()
+    command = """CREATE TABLE %s
                     (
                         Familia TEXT,
                         Genero TEXT,
                         Especie TEXT,
-                        Descripción BLOB,
+                        Nombres_comunes TEXT,
+                        Descripcion BLOB,
                         Zona_de_vida TEXT,
-                        Elevación TEXT,
-                        Vertiente TEXT
+                        Rango_Elevacion BLOB,
+                        Vertiente TEXT,
+                        Naturaleza TEXT,
+                        Usos TEXT,
                     )
-                    """)
+                    """ % tableName
+    cursor.execute(command) 
+    print("Table successfully added")
+    cursor.close()
 
-# Convert sp description file to Binary in order to add it as BLOB DATATYPE into "description" column in table.
-
-
-def file_to_binary(filename):
-    with open(filename, 'rb') as file:
-        blobData = file.read()
-    return blobData
-
-
-def insertBLOB(Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Vertiente):
-    try:
-        insert_blob_query = """
-                            INSERT INTO Gimnospermas (Familia, Genero, Especie, Descripcion, Zona_de_vida, Altitud, Vertiente)
-                            VALUES (?,?,?,?,?,?,?)
-
-                            """
-        print("Please enter the .txt file you want to convert")
-        txt_file = str(input())
-        file_binary = file_to_binary(txt_file)
-        data_tuple = (Familia, Genero, Especie, file_binary,
-                      Zona_de_vida, Altitud, Vertiente)
-        # Commit our command
-        conn.commit()
-        print("Information committed")
-    except:
-        print("error")
-    finally:
-        # Close our connection
-        conn.close()
-        print("Connection closed")
+def table_deleter():
+    print ("What is the table name?")
+    tableName = input()
+    command = "DROP TABLE %s" % tableName
+    cursor.execute(command)
 
 
-# Insert many inputs
-Gimnospermas =  [
-                    ('Cupressaceae', 
-                    'Cupressus', 
-                    'Cupressus lusitanica', 
-                    [('Bosque humedo', 'Bosque muy humedo', 'Bosque pluvial')], 
-                    '1000 - 1300', 'Pacifico')
-                ]
-
-# Insert many inputs
-# cursor.executemany("INSERT INTO Gimnospermas VALUES (?,?,?,?,?,?,?)", Gimnospermas)
-
-
+print("What do you want to do?")
+print("""1. Create a table \n2. Delete a table""")
+selection = input()
+if selection == "1": 
+    table_creator()
+elif selection == "2":
+    table_deleter()
