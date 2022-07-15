@@ -39,7 +39,7 @@ def elevation_range():
             writer = csv.writer(f)
             writer.writerow(elevation)
 
-          print("El rango de elevación se guardaron correctamente")
+          print("El rango de elevación se guardó correctamente")
         
         except: 
            

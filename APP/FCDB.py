@@ -34,7 +34,6 @@ def table_deleter():
     command = "DROP TABLE %s" % tableName
     cursor.execute(command)
 
-
 print("What do you want to do?")
 print("""1. Create a table \n2. Delete a table""")
 selection = input()

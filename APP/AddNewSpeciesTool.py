@@ -1,7 +1,6 @@
 # Is a tool to guide the user and add new species into the DB. In an easy way.
 
 import sqlite3
-import sys
 
 # converts a file to binary for easy storage.
 def file_to_binary(filename):
